@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'components/file_browser/view/home.dart';
+import 'components/file_browser/view/onboarding.dart';
+//import 'components/file_browser/view/home.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
@@ -31,7 +32,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: HomeScreen(),
+      home: ZomoOnboardingScreen(),
+      //HomeScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
