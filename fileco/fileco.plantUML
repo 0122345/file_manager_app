@@ -1,0 +1,112 @@
+@startuml FileCo
+title File Management App - Class Diagram
+
+interface User {
+     + UUID id
+     + String name
+     + String email
+     --
+     + uploadFile()
+     + deleteFile()
+     + shareFile()
+     + searchFile()
+}
+
+class Item {
+     + UUID id
+     + String name
+     + Date createdAt
+     + User owner
+     --
+     + rename()
+     + search()
+     + delete()
+}
+
+class File {
+     + long size
+     + String type
+     --
+     + download()
+     + preview()
+     + playVideo()
+     + playAudio()
+}
+
+class MediaPlayer {
+     + play()
+     + pause()
+     + stop()
+     + seek()
+}
+
+class StorageManager {
+     + analyzeStorage()
+     + optimizeStorage()
+}
+
+class DocumentHandler {
+     + viewDocument()
+     + searchFiles()
+}
+
+class CoreUtilities {
+     + utilityMethod()
+}
+
+class DataSource {
+     + fetchData()
+}
+
+class Component {
+     + render()
+}
+
+' Updated Relationships
+File --|> Item
+Folder --|> Item
+Item --> User : owner
+Permission --> User : user
+Permission --> Item : item
+User ..> StorageService : uses
+File ..> MediaPlayer : uses
+StorageService ..> StorageManager : manages
+DocumentHandler ..> File : handles
+CoreUtilities ..> DataSource : uses
+Component ..> CoreUtilities : uses
+
+class Folder {
+     + List<Item> items
+     + Search<Item> items
+     --
+     + addItem()
+     + removeItem()
+}
+
+class Permission {
+     + UUID id
+     + User user
+     + Item item
+     + String accessLevel
+     --
+     + grant()
+     + revoke()
+}
+
+class StorageService {
+     + createFolder()
+     + saveFile()
+     + readFile()
+     + deleteFile()
+     + TotalSize()
+}
+
+' Relationships
+File --|> Item
+Folder --|> Item
+Item --> User : owner
+Permission --> User : user
+Permission --> Item : item
+User ..> StorageService : uses
+
+@enduml
