@@ -14,13 +14,13 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 }
 
-Widget _buildProfile(dynamic String name, dynamic String image) {
- return Container(
-  width: double.infinity,
-  height: double.infinity,
-  decoration: BoxDecoration(),
-  child: Column(),
- );
-}
+// Widget _buildProfile(dynamic String name, dynamic String image) {
+//  return Container(
+//   width: double.infinity,
+//   height: double.infinity,
+//   decoration: BoxDecoration(),
+//   child: Column(),
+//  );
+// }
 
-Widget _buildCards(){}
+//Widget _buildCards(){}

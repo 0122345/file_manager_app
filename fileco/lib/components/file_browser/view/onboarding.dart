@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './home_screen.dart';
 
 class ZomoOnboardingScreen extends StatefulWidget {
   const ZomoOnboardingScreen({Key? key}) : super(key: key);
@@ -259,6 +260,10 @@ class _ZomoOnboardingScreenState extends State<ZomoOnboardingScreen>
         onPressed: () {
           // Handle start button press
           print('Start Now pressed');
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const HomeScreen()),
+          );
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: const Color(0xFF00D4AA),

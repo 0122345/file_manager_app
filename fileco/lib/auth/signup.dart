@@ -32,20 +32,20 @@ Widget _buildHeader() {
       SizedBox(height: 14),
 
       //TODO: LOADER
-      ProgressBar(),
+      //ProgressBar(),
     ],
   );
 }
 
 
 
-Widget BuildFormButton(){
-  return Column(
-    children:[
-      ElevatedButton(
+// Widget BuildFormButton(){
+//   return Column(
+//     children:[
+//       ElevatedButton(
         
-      ),
+//       ),
 
-    ],
-  );
-}
+//     ],
+//   );
+// }

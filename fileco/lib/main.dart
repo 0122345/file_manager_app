@@ -1,23 +1,23 @@
 import 'package:flutter/material.dart';
 import 'components/file_browser/view/onboarding.dart';
 //import 'components/file_browser/view/home.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+//import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() {
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   runApp(const MyApp());
 }
 
 @override
-  void initState() {
-    //super.initState();
-    initialization();
-  }
+  // void initState() {
+  //   //super.initState();
+  //   initialization();
+  // }
 
-  void initialization() async {
-    FlutterNativeSplash.remove();
-  }
+  // void initialization() async {
+  //   FlutterNativeSplash.remove();
+  // }
 
 
 
