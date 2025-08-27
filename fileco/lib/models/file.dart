@@ -1,11 +1,11 @@
 class File {
   final int id;
   final String name;
-  final String createdAt; // ISO-8601 recommended
+  final String createdAt; 
   final String owner;
-  final String? icon; // optional icon name/path
-  final String type; // extension or logical type (e.g., 'pdf', 'png')
-  final int? size; // bytes, optional
+  final String? icon;  
+  final String type; 
+  final int? size;  
 
   Map<String, dynamic> toJson() => {
         'id': id,

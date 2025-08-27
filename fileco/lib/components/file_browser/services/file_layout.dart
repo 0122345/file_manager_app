@@ -3,14 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../models/file.dart' as m;
 import '../../../models/folder.dart';
 
-/// A flexible, scalable file/folder layout widget.
-///
-/// - Supports multiple view modes via [View]: list, gridsmall, gridLarge, table.
-/// - Generic over item type [T]. Consumers provide extractor callbacks for
-///   name, optional size, modified date, and icon to adapt to any data model.
-/// - Provides basic tap/long-press callbacks and configurable grid parameters.
-
-
+ 
 //FIXME: move to enum filecontent here?
 
 enum View { list, gridsmall, gridLarge, table }
