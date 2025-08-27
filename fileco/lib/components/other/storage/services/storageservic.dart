@@ -1,7 +1,4 @@
-import 'dart:io';
 import 'dart:typed_data';
-import 'dart:convert';
-
 import 'package:fileco/models/folder.dart';
 import 'package:fileco/models/file.dart';
 
