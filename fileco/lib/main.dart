@@ -1,5 +1,8 @@
+import 'package:fileco/components/media/screens/audio_home.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'components/file_browser/view/onboarding.dart';
+import 'components/media/services/audio_service.dart';
 //import 'components/file_browser/view/home.dart';
 //import 'package:flutter_native_splash/flutter_native_splash.dart';
 
@@ -27,14 +30,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'File Manager',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AudioService()),
+      ],
+      child: MaterialApp(
+        title: 'Music Player',
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+          brightness: Brightness.dark,
+          fontFamily: 'SF Pro Display',
+        ),
+        home: const HomeScreen(),
       ),
-      home: ZomoOnboardingScreen(),
-      //HomeScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }
